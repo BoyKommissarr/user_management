@@ -1,0 +1,17 @@
+<h1>Hello Teams</h1>
+<table cellpadding = "10" border = "2">
+<thead>
+    <th>Name</th>
+    <th>Tech Stack</th>
+    <th>Assign Members</th>
+</thead>
+<tbody>
+<%@teams.each do |team|%>
+    <tr>
+        <td><br><%=team.name%><br></td>
+        <td><br><%=team.tech_stack%></td>
+        <td><%= link_to team.name, team_path(team)%></td>
+    </tr>
+<%end%>
+<tbody>
+</table>

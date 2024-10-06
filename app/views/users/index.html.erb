@@ -1,0 +1,15 @@
+<h1>Hello Users</h1>
+<table cellpadding = "5" border = "2">
+<thead>
+    <th>Name</th>
+    <th>Role</th>
+</thead>
+<tbody>
+<%@users.each do |user|%>
+    <tr>
+        <td><br><%=user.name%><br></td>
+        <td><br><%=user.role%></td>
+    </tr>
+<%end%>
+<tbody>
+</table>
