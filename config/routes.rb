@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  resources :teams
-
+  resources :teams do
+    # member do
+      get "/search", to: "teams#search"
+    # end
+  end
   resources :users
 end
